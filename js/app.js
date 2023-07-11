@@ -87,6 +87,10 @@ UI.prototype.mostrarMensaje = (mensaje, tipo)=>{
 
     if (tipo === 'error') {
         div.classList.add('error', 'mt-10');
+        const verificar = document.querySelector('#resultado div');
+        if (verificar) {
+            verificar.remove();
+        }
     } else{
         div.classList.add('correcto');
     }
